@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-    title: 'My App',
+    title: 'Frontend Assessment',
     description: 'Next.js + MUI + Inter font',
 };
 
