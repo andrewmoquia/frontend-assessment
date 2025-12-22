@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Assessment
 
-## Getting Started
+> A small Next.js + TypeScript frontend exercise demonstrating task management features and best practices.
 
-First, run the development server:
+---
+
+## Overview ✅
+
+This repository contains a small Next.js (React) frontend application written in TypeScript. It serves as a frontend assessment project and demonstrates:
+
+- A modular Next.js 13+ app directory structure
+- TypeScript-first components and styles (CSS-in-JS / styled components approach)
+- Simple Redux-based state management for tasks
+- A minimal API route for task CRUD operations (for dev/testing)
+- Accessible and responsive UI components (Task cards, Search, Modals, Navigation)
+
+The app is intended to be run locally for development and evaluation. It focuses on clean code structure, testability, and clarity rather than advanced production concerns.
+
+---
+
+## Guide to installation 💾
+
+Follow these steps to install dependencies and run the app locally.
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/<your-org-or-username>/frontend-assessment.git
+cd frontend-assessment
+```
+
+2. Install dependencies (using npm):
+
+```bash
+npm install
+```
+
+You can also use `yarn` or `pnpm` if you prefer:
+
+```bash
+# yarn
+yarn
+
+# pnpm
+pnpm install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup of environment (env) ⚙️
 
-## Learn More
+This project uses a small number of environment variables for local development. Create a `.env` file in the project root and add the necessary values to run the setup. Use the values provided below:
 
-To learn more about Next.js, take a look at the following resources:
+```
+# .env
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3000/api
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+DATABASE_URL=postgresql://postgres:rj4ZManGNzdRTgs1@db.izlbgxvhthoeckncifks.supabase.co:5432/postgres
+API_USERNAME=myusername
+API_PASSWORD=mypassword
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Notes:
 
-## Deploy on Vercel
+- The `DATABASE_URL` is set, the app will connect to the specified PostgreSQL database and persist tasks there (see `lib/db.ts` and `src/app/api/task/route.ts`).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project structure 🔧
+
+Highlights of the main folders and files:
+
+- `src/app/` - Next.js app routes, layout, and providers
+- `src/components/` - Reusable presentational components and styles
+- `src/redux/` - Redux store and slices for task state
+- `src/api/task/` - API route handling basic task operations
+- `lib/` - Utility code such as API helpers and a simple DB layer
+
+---
+
+## Development tips 💡
+
+- Use the `npm run lint` scripts to check and fix code style.
+
+---
