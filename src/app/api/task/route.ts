@@ -49,8 +49,8 @@ export async function POST(req: Request) {
         }
 
         const [task] = await sql`
-          INSERT INTO task (task_name, task_description)
-          VALUES (${taskName}, ${taskDescription})
+          INSERT INTO task (task_name, task_description, is_completed)
+          VALUES (${taskName}, ${taskDescription}, false)
           RETURNING *;
         `;
 
