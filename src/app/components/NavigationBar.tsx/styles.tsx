@@ -20,4 +20,17 @@ export const NavigationBarContainer = styled(Box)(({ theme }) => ({
         gap: '8px',
         height: '48px',
     },
+
+    '@media (max-width: 600px)': {
+        '&': {
+            flexDirection: 'column',
+            height: 'fit-content',
+            gap: '8px',
+            padding: '16px',
+        },
+
+        '& .MuiButtonBase-root, .nav-title-search-wrapper, .MuiFormControl-root': {
+            width: '100%',
+        },
+    },
 }));
