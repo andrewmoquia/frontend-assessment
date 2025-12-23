@@ -1,16 +1,9 @@
 import axios from 'axios';
 
-const username = process.env.API_USERNAME!;
-const password = process.env.API_PASSWORD!;
-
-const credentials = `${username}:${password}`;
-const encodedCredentials = Buffer.from(credentials).toString('base64');
-
 const serverApi = axios.create({
     baseURL: '/api',
     headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Basic ' + encodedCredentials,
     },
     timeout: 10000,
 });
