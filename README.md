@@ -60,12 +60,7 @@ Then open http://localhost:3000 in your browser to view the app.
 This project uses a small number of environment variables for local development. Create a `.env` file in the project root and add the necessary values to run the setup. Use the values provided below:
 
 ```
-# .env
-NEXT_PUBLIC_API_BASE_URL=http://localhost:3000/api
-
 DATABASE_URL=postgresql://postgres.izlbgxvhthoeckncifks:rj4ZManGNzdRTgs1@aws-1-ap-south-1.pooler.supabase.com:5432/postgres
-API_USERNAME=myusername
-API_PASSWORD=mypassword
 ```
 
 Notes:
