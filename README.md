@@ -74,10 +74,10 @@ Notes:
 Highlights of the main folders and files:
 
 - `src/app/` - Next.js app routes, layout, and providers
-- `src/components/` - Reusable presentational components and styles
-- `src/redux/` - Redux store and slices for task state
-- `src/api/task/` - API route handling basic task operations
-- `lib/` - Utility code such as API helpers and a simple DB layer
+- `src/app/components/` - Reusable presentational components and styles
+- `src/app/redux/` - Redux store and slices for task state
+- `src/app/api/task/` - API route handling basic task operations
+- `src/lib/` - Utility code such as API helpers and a simple DB layer
 
 ---
 
