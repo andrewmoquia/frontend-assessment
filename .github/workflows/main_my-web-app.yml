@@ -24,6 +24,8 @@ jobs:
           node-version: '22.x'
 
       - name: npm install, build, and test
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           npm install
           npm run build --if-present
@@ -62,4 +64,5 @@ jobs:
           app-name: 'my-web-app'
           slot-name: 'Production'
           package: .
+
           
